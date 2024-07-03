@@ -1,0 +1,222 @@
+/* 通用样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 使用边框盒模型 */
+}
+body {
+    font-size: 14px; /* 设置基础字体大小 */
+}
+a {
+    text-decoration: none; /* 去除链接的下划线 */
+}
+
+/* 页面整体容器样式 */
+.manager-container {
+    background-color: #f8f8ff; /* 背景颜色 */
+    min-height: 100vh; /* 最小高度为视窗高度 */
+    background-image: url('@/assets/imgs/bg2.png'); /* 替换为你的背景图片路径 */
+    background-size: cover; /* 背景图片覆盖整个容器 */
+    background-attachment: fixed; /* 背景图片固定不动 */
+    background-repeat: no-repeat; /* 背景图片不重复 */
+    background-position: center center; /* 背景图片居中 */
+}
+
+/* 顶部导航栏样式 */
+.manager-header {
+    display: flex; /* 使用Flex布局 */
+    background-color: #fff; /* 背景颜色 */
+    background-color: rgba(255, 255, 255, 1); /* 半透明背景颜色 */
+}
+
+/* 顶部导航栏左侧部分样式 */
+.manager-header-left {
+    width: 200px; /* 宽度 */
+    height: 60px; /* 高度 */
+    padding-left: 10px; /* 左内边距 */
+    display: flex; /* 使用Flex布局 */
+    align-items: center; /* 垂直居中 */
+    background-color: #FFB347; /* 背景颜色 */
+}
+
+.manager-header-left img {
+    width: 40px; /* 宽度 */
+    height: 40px; /* 高度 */
+}
+
+
+/*考拉外卖后台管理*/
+.manager-header-left .title {
+    flex: 1; /* 占据剩余空间 */
+    margin-left: 5px; /* 左外边距 */
+    font-size: 16px; /* 字体大小 */
+    font-weight: bold; /* 字体加粗 */
+    color: #050505; /* 字体颜色 */
+}
+
+/* 顶部导航栏中间部分样式 */
+.manager-header-center {
+    flex: 1; /* 占据剩余空间 */
+    width: 0; /* 宽度为0 */
+    display: flex; /* 使用Flex布局 */
+    align-items: center; /* 垂直居中 */
+    border-bottom: 1px solid #ddd; /* 底部边框 */
+
+}
+
+/* 顶部导航栏右侧部分样式 */
+.manager-header-right {
+    width: 200px; /* 宽度 */
+    display: flex; /* 使用Flex布局 */
+    align-items: center; /* 垂直居中 */
+    justify-content: flex-end; /* 右对齐 */
+    border-bottom: 1px solid #ddd; /* 底部边框 */
+}
+
+.manager-header-right .avatar {
+    display: flex; /* 使用Flex布局 */
+    align-items: center; /* 垂直居中 */
+    padding-right: 10px; /* 右内边距 */
+    color: #333; /* 字体颜色 */
+    cursor: default; /* 默认光标 */
+
+}
+
+.manager-header-right .avatar img {
+    width: 40px; /* 宽度 */
+    height: 40px; /* 高度 */
+    border-radius: 50%; /* 圆形头像 */
+    margin-right: 5px; /* 右外边距 */
+}
+
+/* 主体内容区域样式 */
+.manager-main {
+    display: flex; /* 使用Flex布局 */
+}
+
+/* 左侧菜单栏样式 */
+.manager-main-left {
+    width: 200px; /* 宽度 */
+    min-height: calc(100vh - 60px); /* 最小高度为视窗高度减去60px */
+    box-shadow: 0 0 6px rgba(0, 21, 41, .35); /* 阴影效果 */
+}
+
+/* 右侧内容区样式 */
+.manager-main-right {
+    flex: 1; /* 占据剩余空间 */
+    width: 0; /* 宽度为0 */
+    padding: 10px; /* 内边距 */
+}
+
+/*搜索栏*/
+.manager-main-right .search {
+    margin-top: 45px; /* 上外边距 */
+    padding: 5px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 1px 10px 0 rgba(0, 0, 0, 0.8); /* 阴影效果 */
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明背景颜色 */
+}
+
+.manager-main-right .operation {
+    margin-top: 5px; /* 上外边距 */
+    padding: 10px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    background-color: rgba(255, 255, 255, 0); /* 半透明背景颜色 */
+}
+
+.manager-main-right .table {
+    margin-top: 5px; /* 上外边距 */
+    padding: 20px 5px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.5); /* 阴影效果 */
+    background-color: rgba(255, 255, 255, 0.5); /* 半透明背景颜色 */
+}
+
+.manager-main-right .table .pagination {
+    margin-top: 10px; /* 上外边距 */
+}
+
+/* 公告列表 */
+.card {
+    padding: 20px; /* 内边距 */
+    background-color: #fff; /* 背景颜色 */
+    border-radius: 5px; /* 圆角 */
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明背景颜色 */
+}
+
+/* ElementUI 样式 */
+.el-menu {
+    width: 200px; /* 宽度 */
+    height: 100%; /* 高度 */
+    background-color: #FFB347; /* 背景颜色，橙色 */
+}
+.el-menu-item {
+    color: #050505; /* 字体颜色 */
+    height: 50px; /* 高度 */
+    line-height: 50px; /* 行高 */
+    background-color: #FFB347 !important; /* 背景颜色，深蓝色 */
+}
+
+/*信息管理*/
+.el-submenu__title {
+    color: #050505; /* 字体颜色 */
+    height: 50px; /* 高度 */
+    line-height: 50px; /* 行高 */
+}
+
+.el-submenu__title i, .el-menu-item i {
+    color: #ddd; /* 图标颜色 */
+}
+
+.el-menu--inline .el-menu-item {
+    padding-left: 50px !important; /* 左内边距 */
+}
+
+.el-menu-item.is-active {
+    background-color:  #f57e3e !important; /* 背景颜色，浅蓝色 */
+    color: #fff; /* 字体颜色 */
+}
+
+.el-menu .is-active {
+    color: #fff ; /* 字体颜色 */
+}
+
+.el-submenu__title:hover {
+    background-color: #f57e3e !important; /* 背景颜色，深蓝色 */
+    color: #fff; /* 字体颜色 */
+}
+
+.el-menu-item:not(.is-active):hover {
+    background-color:  #f57e3e !important; /* 背景颜色，中蓝色 */
+    color: #050505; /* 字体颜色 */
+}
+
+.el-submenu__title:hover i {
+    color: #fff ; /* 图标颜色 */
+}
+
+.el-submenu__icon-arrow {
+    margin-top: -5px; /* 上外边距 */
+}
+
+.el-breadcrumb__inner {
+    color: #050505 !important; /* 字体颜色 */
+}
+
+.el-dropdown-menu {
+    margin-top: 20px !important; /* 上外边距 */
+}
+
+.el-breadcrumb {
+    margin-left: 10px; /* 左外边距 */
+}
+
+th.el-table__cell {
+    background-color: #f8f8f8 !important; /* 背景颜色 */
+    color: rgba(5, 5, 5, 0.7); /* 字体颜色 */
+}
