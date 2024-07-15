@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.mapper.RiderMapper">
+
+    <sql id="Base_Column_List">
+        id, rider_account, rider_password, rider_name, phone, vehicle, status, avatar
+    </sql>
+
+    <select id="selectAll" resultType="com.example.entity.Rider">
+        select
+        <include refid="Base_Column_List" />
+        from riders
+        <where>
+            <if test="id != null"> and id = #{id}</if>
+            <if test="riderAccount != null"> and rider_account like concat('%', #{riderAccount}, '%')</if>
+            <if test="riderName != null"> and rider_name like concat('%', #{riderName}, '%')</if>
+        </where>
+        order by id desc
+    </select>
+
+    <select id="selectById" resultType="com.example.entity.Rider">
+        select
+        <include refid="Base_Column_List" />
+        from riders
+        where id = #{id}
+    </select>
+
+    <delete id="deleteById">
+        delete from riders
+        where id = #{id}
+    </delete>
+
+    <insert id="insert" parameterType="com.example.entity.Rider" useGeneratedKeys="true" keyProperty="id">
+        insert into riders
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="riderAccount != null">rider_account,</if>
+            <if test="riderPassword != null">rider_password,</if>
+            <if test="riderName != null">rider_name,</if>
+            <if test="phone != null">phone,</if>
+            <if test="vehicle != null">vehicle,</if>
+            <if test="status != null">status,</if>
+            <if test="avatar != null">avatar,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="riderAccount != null">#{riderAccount},</if>
+            <if test="riderPassword != null">#{riderPassword},</if>
+            <if test="riderName != null">#{riderName},</if>
+            <if test="phone != null">#{phone},</if>
+            <if test="vehicle != null">#{vehicle},</if>
+            <if test="status != null">#{status},</if>
+            <if test="avatar != null">#{avatar},</if>
+        </trim>
+    </insert>
+
+    <update id="updateById" parameterType="com.example.entity.Rider">
+        update riders
+        <set>
+            <if test="riderAccount != null">
+                rider_account = #{riderAccount},
+            </if>
+            <if test="riderPassword != null">
+                rider_password = #{riderPassword},
+            </if>
+            <if test="riderName != null">
+                rider_name = #{riderName},
+            </if>
+            <if test="phone != null">
+                phone = #{phone},
+            </if>
+            <if test="vehicle != null">
+                vehicle = #{vehicle},
+            </if>
+            <if test="status != null">
+                status = #{status},
+            </if>
+            <if test="avatar != null">
+                avatar = #{avatar},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteBatch" parameterType="list">
+        delete from riders where id in
+        <foreach collection="list" item="id" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+</mapper>
