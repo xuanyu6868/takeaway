@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/orders/orders",
+    "pages/me/me",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/detail/detail",
+    "pages/confirm/confirm",
+    "pages/orderComment/orderComment",
+    "pages/address/address",
+    "pages/addAddress/addAddress",
+    "pages/ordersItem/ordersItem",
+    "pages/comment/comment",
+    "pages/collect/collect",
+    "pages/commentCenter/commentCenter",
+    "pages/aboutUs/aboutUs",
+    "pages/agreement/agreement",
+    "pages/person/person",
+    "pages/search/search",
+    "pages/categoryBusiness/categoryBusiness",
+    "pages/riderIndex/riderIndex",
+    "pages/riderHome/riderHome",
+    "pages/riderOrders/riderOrders",
+    "pages/riderMe/riderMe"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "鸡哥外卖",
+    "navigationBarBackgroundColor": "#00BFFF",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#00BFFF",
+    "color": "#666",
+    "list": [
+      {
+        "iconPath": "/static/icons/home.png",
+        "selectedIconPath": "static/icons/home-active.png",
+        "text": "首页",
+        "pagePath": "pages/index/index"
+      },
+      {
+        "iconPath": "/static/icons/orders.png",
+        "selectedIconPath": "static/icons/orders-active.png",
+        "text": "订单",
+        "pagePath": "pages/orders/orders"
+      },
+      {
+        "iconPath": "/static/icons/me.png",
+        "selectedIconPath": "static/icons/me-active.png",
+        "text": "我的",
+        "pagePath": "pages/me/me"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,63 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add styles for riderHome here */
+
+
+.container.data-v-072d0406 {
+  padding: 40rpx;
+}
+.card.data-v-072d0406 {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  box-shadow: 0 10rpx 10rpx rgba(65, 105, 225, .1);
+  border-radius: 40rpx;
+}
+.card-title.data-v-072d0406 {
+  margin: 50rpx 30rpx;
+  font-size: 40rpx;
+}
+.order-list.data-v-072d0406 {
+  margin-top: 20rpx;
+}
+
+
+.me-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-gap: 10rpx;
+}
+
+
+.tab-bar.data-v-3f519774 {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+.tab-item.data-v-3f519774 {
+  padding: 10px 0;
+  text-align: center;
+  flex: 1;
+}
+.tab-item.active.data-v-3f519774 {
+  color: #00BFFF;
+  border-bottom: 2px solid #00BFFF;
+}
+

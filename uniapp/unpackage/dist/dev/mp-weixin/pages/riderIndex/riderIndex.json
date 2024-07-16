@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "骑手端",
+  "enablePullDownRefresh": false,
+  "usingComponents": {
+    "rider-home": "/pages/riderHome/riderHome",
+    "rider-orders": "/pages/riderOrders/riderOrders",
+    "rider-me": "/pages/riderMe/riderMe"
+  }
+}

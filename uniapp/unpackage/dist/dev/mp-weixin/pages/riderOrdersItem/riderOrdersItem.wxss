@@ -1,0 +1,19 @@
+
+.container.data-v-31c0e36c {
+  padding: 40rpx;
+}
+.card.data-v-31c0e36c {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+  box-shadow: 0 10rpx 10rpx rgba(65,105,225,.1);
+  border-radius: 40rpx;
+}
+.card-title.data-v-31c0e36c {
+  margin: 50rpx 30rpx;
+  font-size: 40rpx;
+}
+.order-list.data-v-31c0e36c {
+  margin-top: 20rpx;
+}
+
